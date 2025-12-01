@@ -16,6 +16,7 @@ from .algorithms import kmeans, sklearn_kmeans
 from .evaluation import compute_inertia, elbow_curve, silhouette_score_sklearn
 from .plotting_clustered import plot_clusters_2d, plot_elbow
 from .data_exporter import export_to_csv
+from .agglomerative import agglomerative_clustering # Added for Task 5
 
 
 def run_clustering(
@@ -87,8 +88,10 @@ def run_clustering(
         labels, centroids = kmeans(X, k=k, random_state=random_state)
     elif algorithm == "sklearn_kmeans":
         labels, centroids = sklearn_kmeans(X, k=k, random_state=random_state)
+    elif algorithm == "agglomerative": # Added for Task 5
+        labels, centroids = agglomerative_clustering(X, k=k, random_state=random_state)
     else:
-        raise ValueError(f"Unknown algorithm '{algorithm}'. Use 'kmeans' or 'sklearn_kmeans'.")
+        raise ValueError(f"Unknown algorithm '{algorithm}'. Use 'kmeans', 'sklearn_kmeans' or 'agglomerative'.")
 
     # Compute metrics
     inertia = compute_inertia(X, labels, centroids)
