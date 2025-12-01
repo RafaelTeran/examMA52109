@@ -25,35 +25,35 @@ All the outputs are stored in a folder named "demo_output", that in case of not 
 
 These are the different modules in the `cluster_maker` package with a brief description:
 
-# algorithms.py
+#### algorithms.py
 
 Contains the core implementation of the K-means algorithm, including centroid initialization, point assignment, and iterative updates until convergence.
 
-# data_analyser.py
+#### data_analyser.py
 
 Provides utilities for exploratory data analysis (EDA) on pandas DataFrames, such as calculating descriptive statistics and correlations.
 
-# data_exporter.py
+#### data_exporter.py
 
 Handles the export of processed DataFrames to disk, supporting output formats such as CSV and formatted text files.
 
-# dataframe_builder.py
+#### dataframe_builder.py
 
 Generates synthetic datasets based on user-defined cluster specifications (seeds), primarily used for testing and demonstrating the clustering algorithms.
 
-# evaluation.py
+#### evaluation.py
 
 Implements metrics for assessing cluster quality—such as Inertia and Silhouette scores—to assist in determining the optimal number of clusters.
 
-# interface.py
+#### interface.py
 
 Serves as the high-level orchestrator of the package. It integrates loading, preprocessing, clustering, evaluation, and plotting into a unified end-to-end workflow.
 
-# plotting_clustered.py
+#### plotting_clustered.py
 
 Contains visualization functions to generate 2D scatter plots of clustered data and charts for evaluation metrics like the Elbow curve.
 
-# preprocessing.py
+#### preprocessing.py
 
 Offers tools for data preparation, including feature selection and standardization (z-score normalization), ensuring data is numerically ready for processing.
 
